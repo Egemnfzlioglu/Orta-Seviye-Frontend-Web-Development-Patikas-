@@ -1,16 +1,17 @@
 # Netlify 
-[TodoApp HomeWork](https://todoapp-egemen.netlify.app)
+##[TodoApp HomeWork](https://todoapp-egemen.netlify.app)
 
 
 ## Netlify Upload
 
-1- Npm run build
-2- Netlify deploy --prod
-3- Create & configure a new site
-4- {User}'s team
-5- Site name (optional): {siteName}
-6- build 
+## Netlify Upload
 
+### 1- Npm run build
+### 2- Netlify deploy --prod
+### 3- Create & configure a new site
+### 4- {User}'s team
+### 5- Site name (optional): {siteName}
+### 6- build
 
 
 
