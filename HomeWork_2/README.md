@@ -1,3 +1,7 @@
+# Netlify 
+(TodoApp HomeWork)[https://todoapp-egemen.netlify.app]
+
+
 ## Netlify Upload
 
 1- Npm run build

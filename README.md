@@ -8,3 +8,8 @@
 4- {User}'s team
 5- Site name (optional): {siteName}
 6- build
+
+
+
+1-(TodoApp HomeWork)[https://todoapp-egemen.netlify.app]
+2-(TodoApp HomeWork)[https://todoapp-egemen.netlify.app]
