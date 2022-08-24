@@ -91,13 +91,27 @@ function App() {
     setItems(newTodos);
   };
 
-  // ### clear işlemi
+  // ### yapılacak todos sayısı
+  const todosLeft = () => todosAll.filter((item) => !item.isCompleted).length;
+
+  // ### completedTodo işlemi
   const clearCompleted = () => {
-    setTodosAll([]);
-    setItems([]);
+    const newTodos = todosAll.filter((todo) => todo.isCompleted === false);
+    setTodosAll(newTodos);
+    setItems(newTodos);
   };
 
- 
+  // ### allTodo işlemi
+  const allTodo = () => getTodos();
+  // ### activeTodo işlemi
+  const activeTodo = () => {
+    setTodosAll(todosAll.filter((todo) => todo.isCompleted === false));
+  };
+
+  // ### completedTodo işlemi
+  const completedTodo = () => {
+    setTodosAll(todosAll.filter((todo) => todo.isCompleted === true));
+  };
 
   return (
     <>
@@ -113,7 +127,6 @@ function App() {
           <label htmlFor="toggle-all">Mark all as complete</label>
 
           <ul className="todo-list">
-         
             <Section
               todosAll={todosAll}
               handleComplete={handleComplete}
@@ -123,9 +136,11 @@ function App() {
           </ul>
         </section>
         <SectionFooter
-          todosAll={todosAll}
+          allTodo={allTodo}
           clearCompleted={clearCompleted}
-         
+          todosLeft={todosLeft}
+          activeTodo={activeTodo}
+          completedTodo={completedTodo}
         />
       </section>
       <Footer />

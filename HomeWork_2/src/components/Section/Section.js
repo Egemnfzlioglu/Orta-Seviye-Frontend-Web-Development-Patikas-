@@ -31,10 +31,9 @@ function Section(props) {
                   onClick={() => handleDelete(todo.id)}
                 ></button>
               </div>
-            
             </li>
           );
-        })}  
+        })}
     </>
   );
 }
