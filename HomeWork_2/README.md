@@ -2,7 +2,7 @@
 ## [TodoApp HomeWork](https://todoapp-egemen.netlify.app)
 
 
-## Netlify Upload
+
 
 ## Netlify Upload
 
