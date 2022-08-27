@@ -1,5 +1,14 @@
-const Search = ({ search, setSearch, err, currentCity, fetchWeatherSearch }) => {
+import { useContext } from "react";
+import { WeatherContext } from "../../context/Weather";
 
+const Search = () => {
+  const {
+    search,
+    setSearch,
+    currentCity,
+    err,
+    fetchWeatherSearch,
+  } = useContext(WeatherContext);
 
   const searchButton = () => {
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const Header = () => {
   return (
@@ -9,9 +9,8 @@ const Header = () => {
             className="col-sm-12 navbar-text "
             style={{ display: "flex", justifyContent: "flex-end" }}
           >
-              <div className="col "></div>
 
-            <div className="col-sm-6 ">
+            <div className="col-sm ">
               {" "}
               <h3>
                 Lütfen Şehir İsimlerini{" "}
@@ -20,7 +19,7 @@ const Header = () => {
                 </b>{" "}
               </h3>
             </div>
-            <div className="col-xs-2 ">
+            <div className="col-sm-3 ">
               <h5
                 className=" navbar-text"
                 style={{ color: "#eee", textDecoration: "underline" }}
@@ -35,4 +34,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
