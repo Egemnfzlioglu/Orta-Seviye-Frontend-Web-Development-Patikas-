@@ -2,6 +2,8 @@
 
 ## Netlify Upload
 
+## npm i netlify-cli
+
 ### 1- Npm run build
 
 ### 2- Netlify deploy --prod
