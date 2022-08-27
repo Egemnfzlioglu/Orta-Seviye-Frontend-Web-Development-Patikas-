@@ -20,13 +20,49 @@ function App() {
     setLoading,
     fetchWeatherSearch,
   } = useContext(WeatherContext);
+
   return (
     <>
+      <>
+        <Header />
+        <Search
+          search={search}
+          setSearch={setSearch}
+          currentCity={currentCity}
+          setCurrentCity={setCurrentCity}
+          setErr={setErr}
+          loading={loading}
+          setLoading={setLoading}
+          fetchWeatherSearch={fetchWeatherSearch}
+          err={err}
+        />
+      </>
       {loading ? (
         <Loading setLoading={setLoading} err={err} />
+
       ) : (
+        <Body weatherData={weatherData} err={err} />
+      )}
+    </>
+
+
+
+
+
+  );
+}
+
+export default App;
+
+
+
+
+
+{/*
+
+     <Header />
+      {(
         <>
-        <Header/>
           <Search
             search={search}
             setSearch={setSearch}
@@ -36,12 +72,13 @@ function App() {
             loading={loading}
             setLoading={setLoading}
             fetchWeatherSearch={fetchWeatherSearch}
-          />
-          <Body weatherData={weatherData} />
-        </>
-      )}
-    </>
-  );
-}
+            err={err}
 
-export default App;
+          />
+          <Body weatherData={weatherData} err={err} />
+        </>)
+
+      }
+    </>
+    <>
+*/}

@@ -4,7 +4,7 @@ const Loading = ({ err }) => {
   return (
     <div>
       <div className="container-fluid loading">
-        {err ? "hata" : ""}{" "}
+        {err === "404" && err}
         <div className=" ">
           <strong className="me-4">
             Loading

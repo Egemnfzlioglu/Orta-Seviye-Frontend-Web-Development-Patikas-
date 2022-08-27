@@ -7,12 +7,12 @@ export const WeatherProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState([]);
   const [currentCity, setCurrentCity] = useState([]);
   const [search, setSearch] = useState("");
-  const [err, setErr] = useState("");
+  const [err, setErr] = useState([]);
 
   const BASE_URL = "https://api.openweathermap.org/data/2.5/forecast";
   const APİ_KEY = "e63aea4652bafb65d7ca84a051539e07";
 
-  
+
 
   const fetchWeatherSearch = async (search) => {
     setLoading(true);
@@ -23,18 +23,25 @@ export const WeatherProvider = ({ children }) => {
 
     const json = await response.json().catch((error) => {
       setErr(error);
-      setLoading(true);
+      setLoading(false);
     });
 
-    setCurrentCity(json.city);
+    setErr(json.cod)
 
-    setWeatherData(json.list);
-    setLoading(false);
+    setTimeout(() => {
+      setCurrentCity(json.city);
+
+      setWeatherData(json.list);
+      setLoading(false);
+    }, 750);
+
   };
   useEffect(() => {
     fetchWeatherSearch()
-   
+
+
   }, []);
+
 
   return (
     <WeatherContext.Provider
