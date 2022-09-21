@@ -1,11 +1,17 @@
-import React from "react";
+import { useContext } from "react";
+import { WeatherContext } from "../../context/Weather";
 
-const Body = ({ weatherData, loading, err }) => {
+const Body = () => {
+
+  const {
+    weatherData,
+    err,
+  } = useContext(WeatherContext);
   return (
     <>
       {err === "404" ?
         <>
-          <div>hata</div>
+          <div></div>
         </> :
         <>
           <div
@@ -46,9 +52,6 @@ const Body = ({ weatherData, loading, err }) => {
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
             ))}
           </div>
