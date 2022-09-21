@@ -1,5 +1,5 @@
-## Netliy
-redux-note-app)[https://egemen-redux-note-app.netlify.app/]
+# Netliy
+## [redux-note-app ](https://egemen-redux-note-app.netlify.app/)
 
 
 # Getting Started with Create React App
